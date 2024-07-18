@@ -45,6 +45,7 @@ const InputAutoComplete = () => {
           id="combo-box-demo"
           options={showOption}
           getOptionLabel={(option) => option.name || ''}
+          isOptionEqualToValue={(option,value) => option.id === value.id}
           sx={{width: 300}}
           renderInput={(params) => <TextField {...params} label="TV Shows" />}
         />

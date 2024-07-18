@@ -5,7 +5,11 @@ interface Show {
   id: number;
   name: string;
   summary: string;
-  image: {medium : 'string'}
+  image: { medium: string };
+  premiered: string;
+  averageRuntime: string;
+  network: {country: {name: string}}
+  genres: []
 }
 
 export interface ApiShow {
@@ -68,7 +72,7 @@ const ShowSlice = createSlice({
         state.isLoading = true;
         state.error = false;
       })
-      .addCase(getShow.fulfilled, (state, action:PayloadAction<Show>) => {
+      .addCase(getShow.fulfilled, (state, action: PayloadAction<Show>) => {
           state.isLoading = false;
           const index = state.shows.findIndex(item => item.show.id === action.payload.id);
           if (index !== -1) {
