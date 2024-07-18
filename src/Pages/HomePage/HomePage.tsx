@@ -2,8 +2,10 @@ import InputAutoComplete from '../../Components/InputAutoComplete/InputAutoCompl
 
 const HomePage = () => {
   return (
-    <div className="ms-5 mt-5">
-      <InputAutoComplete/>
+    <div className="d-flex">
+      <div className="ms-auto mt-5 me-auto">
+        <InputAutoComplete/>
+      </div>
     </div>
   );
 };
