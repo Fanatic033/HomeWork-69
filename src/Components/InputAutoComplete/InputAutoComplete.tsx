@@ -24,8 +24,8 @@ const InputAutoComplete = () => {
     id: item.show.id,
   }));
 
-  const onOptionSelect = (e: React.ChangeEvent<{}>, option: {name: string, id: number} | null) => {
-    e.preventDefault()
+  const onOptionSelect = (e: React.ChangeEvent<{}>, option: { name: string, id: number } | null) => {
+    e.preventDefault();
     if (option) {
       navigate(`/shows/${option.id}`);
     }
@@ -45,9 +45,9 @@ const InputAutoComplete = () => {
           id="combo-box-demo"
           options={showOption}
           getOptionLabel={(option) => option.name || ''}
-          isOptionEqualToValue={(option,value) => option.id === value.id}
+          isOptionEqualToValue={(option, value) => option.id === value.id}
           sx={{width: 300}}
-          renderInput={(params) => <TextField {...params} label="TV Shows" />}
+          renderInput={(params) => <TextField {...params} label="TV Shows"/>}
         />
       </label>
 

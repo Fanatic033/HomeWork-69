@@ -8,8 +8,8 @@ interface Show {
   image: { medium: string };
   premiered: string;
   averageRuntime: string;
-  network: {country: {name: string}}
-  genres: []
+  network: {country: {name: string}};
+  genres: [] ;
 }
 
 export interface ApiShow {

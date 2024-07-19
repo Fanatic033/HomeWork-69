@@ -28,15 +28,15 @@ const ShowPage = () => {
         {!isLoading && show && (
           <>
             <div className="d-flex mt-5  " style={{marginLeft: '180px'}}>
-              <img src={`${show.show.image.medium}`} alt={'image'} className={'me-4'}/>
+              <img src={`${show.show.image?.medium}`} alt={'image'} className={'me-4'}/>
               <div className="">
                 <h2>{show.show.name}</h2>
                 <strong>О Фильме</strong>
                 <ul className="list-inline">
-                  <li>Премьера <strong>{show.show.premiered}</strong></li>
-                  <li>Страна <strong>{show.show.network.country.name}</strong></li>
-                  <li>Продолжительность Эпизода <strong>{show.show.averageRuntime}min</strong></li>
-                  <li>Жанры <strong>{show.show.genres}</strong></li>
+                  <li>Премьера <strong>{show.show.premiered || ''}</strong></li>
+                  <li>Страна <strong>{show.show.network?.country?.name || ''}</strong></li>
+                  <li>Продолжительность Эпизода <strong>{show.show.averageRuntime || ''}min</strong></li>
+                  <li>Жанры <strong>{show.show.genres || ''}</strong></li>
                 </ul>
               </div>
             </div>
